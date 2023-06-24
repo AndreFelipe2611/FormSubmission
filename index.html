@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="banco.php" method="post" enctype="multipart/form-data">
+        <h1>Formulário</h1>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" required><br><br>
+
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="sobrenome" required><br><br>
+
+        <label for="sobre">Sobre</label><br>
+        <textarea id="sobre" name="sobre" rows="4" cols="50"></textarea><br><br>
+
+        <label for="curriculo">Currículo</label>
+        <input class="arquivo" type="file" name="curriculo" accept=".pdf"><br><br>
+
+        <button class="button" type="submit" onclick="handleClick(this)">Enviar</button>
+    </form>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

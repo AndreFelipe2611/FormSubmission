@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(66, 65, 65, 0.979)
+}
+
+h1 {
+    color: rgb(58, 226, 142);
+}
+
+label {
+    display: block;
+    margin-bottom: 1.5px;
+    width: 100%;
+    text-align: center;
+    color: rgb(58, 226, 142);
+}
+
+input {
+    display: block;
+    width: 60%;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+textarea{
+    display: block;
+    width: 60%;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.arquivo {
+    display: inline-block;
+    border-radius: 4px;
+    color: #4CAF50;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.button.clicked {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: relative
+}
+
+.button.clicked:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55px;
+    height: 55px;
+    border: 4px solid rgba(255, 255, 255, 0.185);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+input[type="submit"] {
+    width: auto;
+}
